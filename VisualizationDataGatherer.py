@@ -2,15 +2,13 @@ import dateparser as dp
 from datetime import timedelta
 import pandas as pd
 import math
-from bokeh.plotting import figure, output_file, show
-
-# Querying data from 2018-09-01 to 2021-09-01
 
 NFLXStock = pd.read_csv("NFLX.csv")
 
 # Removing useless columns of data
 NFLXStock.drop(['Open', 'High', 'Low', 'Adj Close', 'Volume'], axis=1, inplace=True)
 
+# Querying data from 2018-09-01 to 2021-09-01
 # Removing rows of data not in the time frame
 for index, row in NFLXStock.iterrows():
     rowDateRaw = row['Date'];
