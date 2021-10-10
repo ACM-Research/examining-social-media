@@ -1,6 +1,7 @@
 import dateparser as dp
 from datetime import timedelta
 import pandas as pd
+import math
 from bokeh.plotting import figure, output_file, show
 
 # Querying data from 2018-09-01 to 2021-09-01
@@ -100,6 +101,44 @@ NFLXStock.drop('index', axis=1, inplace=True)
 
 # renames the close column name to stock for simplicity
 NFLXStock.rename(columns={"Close": "Stock"}, inplace=True)
+
+# renames the close column name to stock for simplicity
+NFLXStock.rename(columns={"Close": "Stock"}, inplace=True)
+
+# Adding a row for change in stock
+
+changeArr = []
+
+# Loops through all the rows to get the change for each row
+for index, row in NFLXStock.iterrows():
+    rowPrice = row["Stock"]
+
+    # Catches index out of bounce error
+    try:
+        someData = NFLXStock.loc[index - 1]
+    except Exception:
+        changeArr.append(0)
+        continue
+
+    beforeRowPrice = NFLXStock.loc[index - 1]['Stock']
+
+    priceDiff = rowPrice - beforeRowPrice
+
+    changeArr.append(priceDiff)
+
+# Adds the row
+NFLXStock['StockChange'] = changeArr
+
+# Adding temporary sentiment data
+
+sentimentVals = []
+
+for index, row in NFLXStock.iterrows():
+    sentiVal = math.sin(index * math.pi /100)
+
+    sentimentVals.append(sentiVal)
+
+NFLXStock['SentimentValue'] = sentimentVals
 
 # Exports the panda database to a file
 NFLXStock.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/{}.csv'.format("VisualizationData"))
