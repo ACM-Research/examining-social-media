@@ -1,0 +1,171 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.TitleHolder{
+    display: block;
+    background-color: #138CA5;
+    height: 10rem;
+}
+
+.TitleText{
+    color: white;
+    text-align: center;
+    padding: 3.5rem 0;
+    font-size: 35px;
+}
+
+.ProjectOutlie{
+    padding: 50px 0;
+}
+
+.OutlineText{
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.ProcessHolder{
+    width: 70%;
+    margin: auto;
+    padding: 25px 0
+}
+
+.ProcessTitle{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+
+.ProcessContents{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.ProcessTextHolder{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ProcessText{
+    text-align: left;
+    padding-right: 40px;
+    padding-left: 30px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.ProcessVisualizationR,.ProcessVisualizationL{
+    height: 500px;
+    width: 500px;
+    margin: 0 10px;
+    order: 1;
+}
+
+.ProcessVisualizationR{
+    order: 1;
+}
+
+.ProcessVisualizationL{
+    order: -1;
+}
+
+.TempProcessVisalize{
+    width:100%;
+    height: 100%;
+    background-color: grey;
+}
+
+.SentimentSectionTitle{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.SentimentSectionFlex{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+}
+
+.SentimentAnalyzer{
+    width: 500px;
+    margin: 75px 50px;
+}
+
+.SetntimentGraphTitle{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.SentimentGraphHolder{
+    width: 500px;
+    height: 500px;
+    margin: 20px 0;
+}
+
+.SentimentGraph{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+}
+
+.CorrelatoinHolder{
+    padding: 20px 0;
+}
+
+.Correlation{
+    text-align: center;
+    font-size: 35px;
+}
+
+.SentimentDescription{
+    text-align: center;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.ConclusionHolder{
+    padding: 30px;
+}
+
+.ConclusionTitle{
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+
+    padding-bottom: 25px;
+}
+
+.ConclusionText{
+    display: block;
+    margin: auto;
+    width: 70%;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.GitHub{
+    display: block;
+    margin: auto;
+    width: 70%;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    padding: 40px 0;
+}
