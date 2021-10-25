@@ -1,4 +1,5 @@
 from bokeh.plotting import figure, output_file, show
+from bokeh.embed import components
 import pandas as pd
 
 # Gets the data for visualization
@@ -48,9 +49,6 @@ stockYear2018 = figure(
 stockYear2018.line(year2018["Date"], year2018["Stock"], legend_label="StockData", line_width=2,
                    line_color="Red")
 
-output_file(filename="Graphs/StockData/StockGraph2018.html", title="StockGraph2018")
-show(stockYear2018)
-
 # Makes the graph object for stock 2019
 stockYear2019 = figure(
     title='Stock(9/2019-9/2020)',
@@ -65,9 +63,6 @@ stockYear2019 = figure(
 # Adds a line for the stock values
 stockYear2019.line(year2019["Date"], year2019["Stock"], legend_label="StockData", line_width=2,
                    line_color="Orange")
-
-output_file(filename="Graphs/StockData/StockGraph2019.html", title="StockGraph2019")
-show(stockYear2019)
 
 # Makes the graph object for stock 2020
 stockYear2020 = figure(
@@ -84,9 +79,6 @@ stockYear2020 = figure(
 stockYear2020.line(year2020["Date"], year2020["Stock"], legend_label="StockData", line_width=2,
                    line_color="Yellow")
 
-output_file(filename="Graphs/StockData/StockGraph2020.html", title="StockGraph2020")
-show(stockYear2020)
-
 # Makes the graph object for sentiment 2018
 sentimentYear2018 = figure(
     title='Sentiment(9/2018-9/2019)',
@@ -101,9 +93,6 @@ sentimentYear2018 = figure(
 # Adds a line for the stock values
 sentimentYear2018.line(year2018["Date"], year2018["SentimentValue"], legend_label="SentimentData", line_width=2,
                        line_color="Red")
-
-output_file(filename="Graphs/SentimentData/SentimentGraph2018.html", title="StockGraph2018")
-show(sentimentYear2018)
 
 # Makes the graph object for sentiment 2019
 sentimentYear2019 = figure(
@@ -120,9 +109,6 @@ sentimentYear2019 = figure(
 sentimentYear2019.line(year2019["Date"], year2019["SentimentValue"], legend_label="SentimentData", line_width=2,
                        line_color="Orange")
 
-output_file(filename="Graphs/SentimentData/SentimentGraph2019.html", title="StockGraph2019")
-show(sentimentYear2019)
-
 # Makes the graph object for sentiment 2020
 sentimentYear2020 = figure(
     title='Sentiment(9/2020-9/2021)',
@@ -137,9 +123,6 @@ sentimentYear2020 = figure(
 # Adds a line for the stock values
 sentimentYear2020.line(year2020["Date"], year2020["SentimentValue"], legend_label="SentimentData", line_width=2,
                        line_color="Yellow")
-
-output_file(filename="Graphs/SentimentData/SentimentGraph2020.html", title="StockGraph2020")
-show(sentimentYear2020)
 
 # Makes the graph object for sentiment and stock together for 2018
 SentimentnStock2018 = figure(
@@ -160,10 +143,6 @@ SentimentnStock2018.line(year2018["Date"], year2018["StockChange"], legend_label
 SentimentnStock2018.line(year2018["Date"], year2018["SentimentValue"], legend_label="Sentiment", line_width=2,
                          line_color="Blue")
 
-output_file(filename="Graphs/SentimentnStock/SentimentnStock2018.html", title="SentimentnStock2018")
-
-show(SentimentnStock2018)
-
 # Makes the graph object for sentiment and stock together for 2019
 SentimentnStock2019 = figure(
     title='Sentiment and Stock(9/2019 - 9/2020)',
@@ -183,9 +162,6 @@ SentimentnStock2019.line(year2019["Date"], year2019["StockChange"], legend_label
 SentimentnStock2019.line(year2019["Date"], year2019["SentimentValue"], legend_label="Sentiment", line_width=2,
                          line_color="Blue")
 
-output_file(filename="Graphs/SentimentnStock/SentimentnStock2019.html", title="SentimentnStock2019")
-
-show(SentimentnStock2019)
 
 # Makes the graph object for sentiment and stock together for 2020
 SentimentnStock2020 = figure(
@@ -206,6 +182,18 @@ SentimentnStock2020.line(year2020["Date"], year2020["StockChange"], legend_label
 SentimentnStock2020.line(year2020["Date"], year2020["SentimentValue"], legend_label="Sentiment", line_width=2,
                          line_color="Blue")
 
-output_file(filename="Graphs/SentimentnStock/SentimentnStock2020.html", title="SentimentnStock2020")
+# Puts all the graphs into a dictionary so we can embed them all at the same time
+Graphs = {"Stock2018": stockYear2018,"Stock2019": stockYear2019,"Stock2012": stockYear2020}
 
-show(SentimentnStock2020)
+# Gets the embedding code
+script, divs = components(Graphs)
+
+# Exports the embedded javascript code into a file
+ScriptFile = open("C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Graphs/Scripts.txt", "w")
+ScriptFile.write(script)
+ScriptFile.close()
+
+# Exports the embedded html div code into a file
+DivFile = open("C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Graphs/Divs.txt", "w")
+DivFile.write(str(divs))
+DivFile.close()

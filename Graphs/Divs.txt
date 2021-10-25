@@ -1,0 +1,1 @@
+{'Stock2018': '\n<div class="bk-root" id="53d051fa-358c-4fb8-919f-5a29b82b1caf" data-root-id="1002"></div>', 'Stock2019': '\n<div class="bk-root" id="dccc752a-e91d-48dd-bad7-05964eb6852a" data-root-id="1064"></div>', 'Stock2012': '\n<div class="bk-root" id="c68d568c-c040-48c6-92c7-ecc1f8d91f78" data-root-id="1126"></div>'}

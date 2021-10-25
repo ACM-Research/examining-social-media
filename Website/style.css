@@ -47,7 +47,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 500px;
 }
 
 .ProcessTextHolder{
@@ -66,10 +65,12 @@
 }
 
 .ProcessVisualizationR,.ProcessVisualizationL{
-    height: 500px;
     width: 500px;
     margin: 0 10px;
     order: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .ProcessVisualizationR{
@@ -80,10 +81,35 @@
     order: -1;
 }
 
-.TempProcessVisalize{
-    width:100%;
-    height: 100%;
+.ProcessGraphHolder{
+    width:500px;
+    height: 500px;
     background-color: grey;
+}
+
+.GraphButtons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+    padding-top: 40px;
+    
+}
+
+.GraphButton{
+    width: 75px;
+    height: 100%;
+    background-color: #000000;
+    color: white;
+    margin: 0 5px;
+    font-size: 15px;
+}
+.GraphButton:hover{
+    background-color: #555555;
+}
+
+.Image{
+    min-width: 100%;
 }
 
 .SentimentSectionTitle{
