@@ -3,7 +3,7 @@ from datetime import timedelta
 import pandas as pd
 import math
 
-NFLXStock = pd.read_csv("../NFLX.csv")
+NFLXStock = pd.read_csv("NFLX.csv")
 
 # Removing useless columns of data
 NFLXStock.drop(['Open', 'High', 'Low', 'Adj Close', 'Volume'], axis=1, inplace=True)
