@@ -25,7 +25,6 @@ for i in range(len(tweet_list)):
     tweet_list[i] = temp
 # all dates of the tweets are now stored in a list
 
-
 # Removing links
 for i in range(len(tweet_list)):
     edited_temp = tweet_list[i]
@@ -33,7 +32,6 @@ for i in range(len(tweet_list)):
     edited_temp = re.sub(r"http\S+", "", edited_temp)  # remove links
     edited_temp = re.sub(r"www.\S+", "", edited_temp)
     tweet_list[i] = edited_temp
-
 
 for i in range(len(tweet_list)):  # remove hashtags
     tweet_list[i] = re.sub(r"(@[A-Za-z0-9] +)| [^\w\s]|#|http\S+", " ", tweet_list[i])

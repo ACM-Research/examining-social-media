@@ -10,9 +10,9 @@ const PAGE_URL_END = "&src=typed_query&f=top";
 //If the momnth was august do new Date(2019, 7,1) instead of new Date(2019, 8,1)
 
 //Start date for querying
-const START_DATE = new Date(2020, 8,1);
+const START_DATE = new Date(2021, 8,1);
 //End date for querying
-const END_DATE = new Date(2021, 8,1);
+const END_DATE = new Date(2021, 10,1);
 
 //Curreny day querying
 var currentDay = START_DATE;
@@ -132,7 +132,7 @@ var currentDay = START_DATE;
 	//Writes the data into a csv
 	const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 	const csvWriter = createCsvWriter({
-		path: 'C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/scraper/tweets2020-2021.csv',
+		path: 'C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/scraper/tweets2021Current.csv',
 		header: [
 		  {id: 'Tweet', title: 'Tweet'},
 		  {id: 'Date', title: 'Date'},

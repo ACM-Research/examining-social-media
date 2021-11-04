@@ -189,11 +189,11 @@ Graphs = {"Stock2018": stockYear2018,"Stock2019": stockYear2019,"Stock2012": sto
 script, divs = components(Graphs)
 
 # Exports the embedded javascript code into a file
-ScriptFile = open("C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Graphs/Scripts.txt", "w")
+ScriptFile = open("/Scripts.txt", "w")
 ScriptFile.write(script)
 ScriptFile.close()
 
 # Exports the embedded html div code into a file
-DivFile = open("C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Graphs/Divs.txt", "w")
+DivFile = open("/Divs.txt", "w")
 DivFile.write(str(divs))
 DivFile.close()
