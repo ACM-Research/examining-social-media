@@ -181,7 +181,7 @@ SentimentnStock2020.line(year2020["Date"], year2020["StockChange"], legend_label
                          line_color="Red")
 
 # Adds a line for the sentiment values
-SentimentnStock2020.line(year2020["Date"], year2020["SentimentValue"], legend_label="Sentiment", line_width=2,
+SentimentnStock2020.line(year2020["Date"], year2020["SentimentChange"], legend_label="Sentiment", line_width=2,
                          line_color="Blue")
 
 output_file(filename="SentStockGraph.html", title="Sentiment and Stock Graph")

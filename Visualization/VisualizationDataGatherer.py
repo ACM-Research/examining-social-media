@@ -104,7 +104,7 @@ NFLXStock.rename(columns={"Close": "Stock"}, inplace=True)
 
 # Adding a row for change in stock
 
-changeArr = []
+stockChangeArr = []
 
 # Loops through all the rows to get the change for each row
 for index, row in NFLXStock.iterrows():
@@ -114,17 +114,17 @@ for index, row in NFLXStock.iterrows():
     try:
         someData = NFLXStock.loc[index - 1]
     except Exception:
-        changeArr.append(0)
+        stockChangeArr.append(0)
         continue
 
     beforeRowPrice = NFLXStock.loc[index - 1]['Stock']
 
     priceDiff = rowPrice - beforeRowPrice
 
-    changeArr.append(priceDiff)
+    stockChangeArr.append(priceDiff)
 
 # Adds the row
-NFLXStock['StockChange'] = changeArr
+NFLXStock['StockChange'] = stockChangeArr
 
 # adding sentiment data to the
 SentimentData = pd.read_csv("../sentiment-analysis-data/DailySentiment.csv")
@@ -138,5 +138,31 @@ FinishedDF = pd.merge(NFLXStock,SentimentData, how="outer", on="Date")
 
 # Drops rows with missing values
 FinishedDF.dropna(axis=0, how='any', thresh=None, subset=None, inplace=True)
+
+sentimentChangeArr = []
+
+# Loops through all the rows to get the change for each row
+for index, row in FinishedDF.iterrows():
+    rowSent = row["SentimentValue"]
+
+    # Catches index out of bounce error
+    try:
+        someData = FinishedDF.loc[index - 1]
+    except Exception:
+        sentimentChangeArr.append(0)
+        continue
+
+    beforeSent = FinishedDF.loc[index - 1]['SentimentValue']
+
+    sentDiff = rowSent - beforeSent
+
+    sentimentChangeArr.append(sentDiff)
+
+
+
+# Adds the row
+FinishedDF['SentimentChange'] = sentimentChangeArr
+
+
 # Exports the panda database to a file
 FinishedDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/{}.csv'.format("VisualizationData"))
