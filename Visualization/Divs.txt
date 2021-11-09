@@ -1,11 +1,11 @@
 {
-'Stock2018': '\n<div class="bk-root" id="893eebcb-e620-461c-b39b-e5544ddc6c78" data-root-id="1002"></div>',
- 'Stock2019': '\n<div class="bk-root" id="d0d82805-4890-4838-8fdb-d8e5b5f7837e" data-root-id="1064"></div>',
- 'Stock2020': '\n<div class="bk-root" id="04ccc0c9-889a-45c0-a012-90d125a6c966" data-root-id="1126"></div>',
- 'Sentiment2018': '\n<div class="bk-root" id="4ea23685-85b9-43b1-ae15-b33aad46655e" data-root-id="1188"></div>',
- 'Sentiment2019': '\n<div class="bk-root" id="3b66641d-3ade-4ddb-b701-aaa2a4e4c908" data-root-id="1250"></div>',
- 'Sentiment2020': '\n<div class="bk-root" id="95f8221a-b7cf-4931-b657-fc5ec3454d9f" data-root-id="1312"></div>',
- 'SentimentnStock2018': '\n<div class="bk-root" id="963c047a-fff5-49e7-ae17-d90f26d47b5a" data-root-id="1374"></div>',
- 'SentimentnStock2019': '\n<div class="bk-root" id="a130bf1b-d706-41c8-9d58-317c5175212e" data-root-id="1466"></div>',
- 'SentimentnStock2020': '\n<div class="bk-root" id="52f625f7-7a65-4527-b031-0798ef1bafde" data-root-id="1558"></div>'
+'Stock2018': '\n<div class="bk-root" id="532aa060-8be9-45fc-b9f8-9c493cd09199" data-root-id="1002"></div>',
+ 'Stock2019': '\n<div class="bk-root" id="06e7508a-3f8c-47ae-999b-7bfd2a39c7cf" data-root-id="1064"></div>',
+ 'Stock2020': '\n<div class="bk-root" id="852905ac-59a1-4502-91c1-53f8189733b5" data-root-id="1126"></div>',
+ 'Sentiment2018': '\n<div class="bk-root" id="271461e5-8a24-42f9-be83-788f9bf320fa" data-root-id="1188"></div>',
+ 'Sentiment2019': '\n<div class="bk-root" id="651324f4-d2a5-4c22-a992-db72898811d4" data-root-id="1250"></div>',
+ 'Sentiment2020': '\n<div class="bk-root" id="c0c61d03-1f86-409e-8484-79a11068b0d3" data-root-id="1312"></div>',
+ 'SentimentnStock2018': '\n<div class="bk-root" id="d8b733ed-5855-459a-9dc6-e8e7c50f74ff" data-root-id="1374"></div>',
+ 'SentimentnStock2019': '\n<div class="bk-root" id="546b2543-c043-4664-aa36-3c3bc3023ecc" data-root-id="1466"></div>',
+ 'SentimentnStock2020': '\n<div class="bk-root" id="91f5f60f-9cc6-49cc-bf92-2b2dab2931bb" data-root-id="1558"></div>'
 }

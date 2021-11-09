@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const { hashTweetData } = require("./util");
 
 
-const PAGE_URL_START = "https://twitter.com/search?q=%23NETFLIX%20until%3A";
+const PAGE_URL_START = "https://twitter.com/search?q=%23Tesla%20until%3A";
 const PAGE_URL_MID = "%20since%3A";
 const PAGE_URL_END = "&src=typed_query&f=top";
 
@@ -12,7 +12,7 @@ const PAGE_URL_END = "&src=typed_query&f=top";
 //Start date for querying
 const START_DATE = new Date(2018, 8,1);
 //End date for querying
-const END_DATE = new Date(2021, 8,1);
+const END_DATE = new Date(2019, 8,1);
 
 //Curreny day querying
 var currentDay = START_DATE;
@@ -40,7 +40,7 @@ var currentDay = START_DATE;
 		const PAGE_URL = PAGE_URL_START + curEndDayStr + PAGE_URL_MID + curStartDayStr + PAGE_URL_END;
 
 		//Amount of tweets attempting topull
-		const TWEET_LIMIT = 10;
+		const TWEET_LIMIT = 90;
 
 		// initialize browser with page and viewport
 		const browser = await puppeteer.launch({
@@ -134,7 +134,7 @@ var currentDay = START_DATE;
 	//Writes the data into a csv
 	const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 	const csvWriter = createCsvWriter({
-		path: 'C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/scraper/tweetstest.csv',
+		path: 'C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/scraper/faceBookTest.csv',
 		header: [
 		  {id: 'Tweet', title: 'Tweet'},
 		  {id: 'Date', title: 'Date'},
@@ -143,3 +143,5 @@ var currentDay = START_DATE;
 	csvWriter.writeRecords(tweetSet).then(()=> console.log('The CSV file was written successfully'));
 
 })();
+
+// 9/27/2018 has some wrong tweets 

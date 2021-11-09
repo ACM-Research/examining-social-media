@@ -128,10 +128,7 @@ for index, row in NFLXStock.iterrows():
 NFLXStock['StockChange'] = stockChangeArr
 
 # adding sentiment data to the
-SentimentData = pd.read_csv("../sentiment-analysis-data/DailySentiment.csv")
-
-SentimentData.drop(["Unnamed: 0"], axis=1, inplace=True)
-
+SentimentData = pd.read_csv("../sentiment-analysis-data/sentimentAverages.csv")
 
 # Combines stock and sentiment data into the finished dataframe
 NFLXStock['Date'] = pd.to_datetime(NFLXStock.Date)
@@ -165,3 +162,5 @@ FinishedDF['SentimentChange'] = sentimentChangeArr
 
 # Exports the panda database to a file
 FinishedDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/{}.csv'.format("VisualizationData"))
+
+print(FinishedDF.corr(method ='pearson'))

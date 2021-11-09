@@ -12,7 +12,7 @@ VisualizationData.drop('Unnamed: 0', axis=1, inplace=True)
 for index, row in VisualizationData.iterrows():
     VisualizationData.at[index, "StockChange"] = max(-0.5, min(row["StockChange"] / 50, 0.5))
 
-print(VisualizationData.corr(method ='pearson'))
+
 
 # Gets the index of the range for each graph,
 index2018 = None;

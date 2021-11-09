@@ -64,4 +64,4 @@ df2020 = average_tweet_sentiments(tweetSentiment2020)
 SentimentAverageDF = pd.concat([df2018, df2019, df2020])
 
 # Exports the file to a csv
-SentimentAverageDF.to_csv('C:/Users/jluo1/OneDrive/Documents/sentimentAverages.csv', index=False)
+SentimentAverageDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/sentiment-analysis-data/{}.csv'.format("DailySentiment"), index=False)
