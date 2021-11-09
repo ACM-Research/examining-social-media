@@ -10,7 +10,9 @@ VisualizationData.drop('Unnamed: 0', axis=1, inplace=True)
 
 # Reduces the stock change value into a range of -1 to 1 to match sentiment value
 for index, row in VisualizationData.iterrows():
-    VisualizationData.at[index, "StockChange"] = max(-1, min(row["StockChange"] / 25, 1))
+    VisualizationData.at[index, "StockChange"] = max(-0.5, min(row["StockChange"] / 50, 0.5))
+
+print(VisualizationData.corr(method ='pearson'))
 
 # Gets the index of the range for each graph,
 index2018 = None;
@@ -165,13 +167,13 @@ SentimentnStock2019.line(year2019["Date"], year2019["SentimentValue"], legend_la
 
 # Makes the graph object for sentiment and stock together for 2020
 SentimentnStock2020 = figure(
-    title='Sentiment and Stock(9/2020 - 9/2021)',
+    title='Sentiment and Stock(9/2020 - 10/2020)',
     x_axis_label='Date',
     y_axis_label='Value',
     plot_width=500,
     plot_height=500,
     x_axis_type='datetime',
-    y_range=(-1, 1)
+    y_range=(-0.5, 0.5),
 )
 
 # Adds a line for the stock values
@@ -181,6 +183,9 @@ SentimentnStock2020.line(year2020["Date"], year2020["StockChange"], legend_label
 # Adds a line for the sentiment values
 SentimentnStock2020.line(year2020["Date"], year2020["SentimentValue"], legend_label="Sentiment", line_width=2,
                          line_color="Blue")
+
+output_file(filename="SentStockGraph.html", title="Sentiment and Stock Graph")
+show(SentimentnStock2020)
 
 # Puts all the graphs into a dictionary so we can embed them all at the same time
 Graphs = {
@@ -209,3 +214,4 @@ divStr = divStr.replace('}', '\n}')
 
 DivFile.write(divStr)
 DivFile.close()
+
