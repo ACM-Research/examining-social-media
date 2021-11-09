@@ -10,9 +10,9 @@ const PAGE_URL_END = "&src=typed_query&f=top";
 //If the momnth was august do new Date(2019, 7,1) instead of new Date(2019, 8,1)
 
 //Start date for querying
-const START_DATE = new Date(2021, 8,1);
+const START_DATE = new Date(2018, 8,1);
 //End date for querying
-const END_DATE = new Date(2021, 10,1);
+const END_DATE = new Date(2021, 8,1);
 
 //Curreny day querying
 var currentDay = START_DATE;
@@ -40,7 +40,7 @@ var currentDay = START_DATE;
 		const PAGE_URL = PAGE_URL_START + curEndDayStr + PAGE_URL_MID + curStartDayStr + PAGE_URL_END;
 
 		//Amount of tweets attempting topull
-		const TWEET_LIMIT = 90;
+		const TWEET_LIMIT = 10;
 
 		// initialize browser with page and viewport
 		const browser = await puppeteer.launch({
@@ -125,14 +125,16 @@ var currentDay = START_DATE;
 				i++;
 			}
 		}
+		await browser.close();
 		//Goes to the next day for tweet collection
 		currentDay = new Date(currentDay.getFullYear(), currentDay.getMonth(), currentDay.getDate() + 1);
+		console.log("Days Left: " + ((END_DATE - currentDay) / 60/60/24/1000))
 	}
 
 	//Writes the data into a csv
 	const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 	const csvWriter = createCsvWriter({
-		path: 'C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/scraper/tweets2021Current.csv',
+		path: 'C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/scraper/tweetstest.csv',
 		header: [
 		  {id: 'Tweet', title: 'Tweet'},
 		  {id: 'Date', title: 'Date'},

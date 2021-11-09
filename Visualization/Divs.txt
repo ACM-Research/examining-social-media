@@ -1,11 +1,11 @@
 {
-'Stock2018': '\n<div class="bk-root" id="39efd475-5539-459e-b813-d1f469cb7139" data-root-id="1002"></div>',
- 'Stock2019': '\n<div class="bk-root" id="ab62d73a-efef-4892-b104-b9239aa5c18d" data-root-id="1064"></div>',
- 'Stock2020': '\n<div class="bk-root" id="23c95995-c19a-4174-95dc-d0b2bff95233" data-root-id="1126"></div>',
- 'Sentiment2018': '\n<div class="bk-root" id="992e3c01-379e-4c38-928e-c120f3f796a0" data-root-id="1188"></div>',
- 'Sentiment2019': '\n<div class="bk-root" id="220d0599-7b48-4db7-b7b5-5462d3856b08" data-root-id="1250"></div>',
- 'Sentiment2020': '\n<div class="bk-root" id="bd126558-d04b-40a8-b0b5-84c410b431d9" data-root-id="1312"></div>',
- 'SentimentnStock2018': '\n<div class="bk-root" id="65a4e31b-75f6-44df-85e5-4ad0709f57eb" data-root-id="1374"></div>',
- 'SentimentnStock2019': '\n<div class="bk-root" id="261f47ed-3914-418c-a685-22798c92614f" data-root-id="1466"></div>',
- 'SentimentnStock2020': '\n<div class="bk-root" id="90af2cbe-338b-4efc-b4da-9705d6ee9d5f" data-root-id="1558"></div>'
+'Stock2018': '\n<div class="bk-root" id="893eebcb-e620-461c-b39b-e5544ddc6c78" data-root-id="1002"></div>',
+ 'Stock2019': '\n<div class="bk-root" id="d0d82805-4890-4838-8fdb-d8e5b5f7837e" data-root-id="1064"></div>',
+ 'Stock2020': '\n<div class="bk-root" id="04ccc0c9-889a-45c0-a012-90d125a6c966" data-root-id="1126"></div>',
+ 'Sentiment2018': '\n<div class="bk-root" id="4ea23685-85b9-43b1-ae15-b33aad46655e" data-root-id="1188"></div>',
+ 'Sentiment2019': '\n<div class="bk-root" id="3b66641d-3ade-4ddb-b701-aaa2a4e4c908" data-root-id="1250"></div>',
+ 'Sentiment2020': '\n<div class="bk-root" id="95f8221a-b7cf-4931-b657-fc5ec3454d9f" data-root-id="1312"></div>',
+ 'SentimentnStock2018': '\n<div class="bk-root" id="963c047a-fff5-49e7-ae17-d90f26d47b5a" data-root-id="1374"></div>',
+ 'SentimentnStock2019': '\n<div class="bk-root" id="a130bf1b-d706-41c8-9d58-317c5175212e" data-root-id="1466"></div>',
+ 'SentimentnStock2020': '\n<div class="bk-root" id="52f625f7-7a65-4527-b031-0798ef1bafde" data-root-id="1558"></div>'
 }
