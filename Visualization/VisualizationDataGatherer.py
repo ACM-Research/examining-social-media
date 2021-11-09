@@ -40,6 +40,7 @@ NFLXStock.sort_values(by=['Date'], inplace=True)
 NFLXStock.reset_index(inplace=True)
 NFLXStock.drop('index', axis=1, inplace=True)
 
+
 # Loops through all the rows to fill in the missing data
 for index, row in NFLXStock.iterrows():
     rowDateRaw = row['Date']
@@ -131,8 +132,9 @@ SentimentData = pd.read_csv("../sentiment-analysis-data/DailySentiment.csv")
 
 SentimentData.drop(["Unnamed: 0"], axis=1, inplace=True)
 
+
 # Combines stock and sentiment data into the finished dataframe
-NFLXStock['Date'] = pd.to_datetime(SentimentData.Date)
+NFLXStock['Date'] = pd.to_datetime(NFLXStock.Date)
 SentimentData['Date'] = pd.to_datetime(SentimentData.Date)
 FinishedDF = pd.merge(NFLXStock,SentimentData, how="outer", on="Date")
 
@@ -158,11 +160,8 @@ for index, row in FinishedDF.iterrows():
 
     sentimentChangeArr.append(sentDiff)
 
-
-
 # Adds the row
 FinishedDF['SentimentChange'] = sentimentChangeArr
-
 
 # Exports the panda database to a file
 FinishedDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/{}.csv'.format("VisualizationData"))
