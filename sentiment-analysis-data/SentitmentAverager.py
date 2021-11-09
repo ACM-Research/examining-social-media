@@ -4,7 +4,7 @@ from datetime import *
 # Makes the database to store the day average sentiment
 SentimentAverageDF = pd.DataFrame({
     'Date': [],
-    'Sentiment': []
+    'SentimentValue': []
 })
 
 # Sentiment Data
@@ -35,14 +35,14 @@ for index, row in tweetSentiment2018.iterrows():
     # If its a new day then get the average and reset the variables for the next day
     else:
         sentimentAverage = currentSum / currentAmount
-        SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "Sentiment": sentimentAverage},ignore_index=True)
+        SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "SentimentValue": sentimentAverage},ignore_index=True)
         currentDate = row["Date"]
         currentAmount = 1
         currentSum = row['0']
 
 # Adds the last day since it would exit the loop before adding it
 sentimentAverage = currentSum / currentAmount
-SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "Sentiment": sentimentAverage},ignore_index=True)
+SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "SentimentValue": sentimentAverage},ignore_index=True)
 # Resets the date variable for the next loop
 currentDate = None
 
@@ -67,14 +67,14 @@ for index, row in tweetSentiment2019.iterrows():
     # If its a new day then get the average and reset the variables for the next day
     else:
         sentimentAverage = currentSum / currentAmount
-        SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "Sentiment": sentimentAverage},ignore_index=True)
+        SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "SentimentValue": sentimentAverage},ignore_index=True)
         currentDate = row["Date"]
         currentAmount = 1
         currentSum = row['0']
 
 # Adds the last day since it would exit the loop before adding it
 sentimentAverage = currentSum / currentAmount
-SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "Sentiment": sentimentAverage}, ignore_index=True)
+SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "SentimentValue": sentimentAverage}, ignore_index=True)
 # Resets the date variable for the next loop
 currentDate = None
 
@@ -88,7 +88,7 @@ for index, row in tweetSentiment2020.iterrows():
         tweetSentiment2020.at[index, "Date"] = "2021/"+dataSplit[1]+"/" + dataSplit[2]
 
 # sorts the data
-tweetSentiment2020['Date'] =pd.to_datetime(tweetSentiment2020.Date)
+tweetSentiment2020['Date'] = pd.to_datetime(tweetSentiment2020.Date)
 tweetSentiment2020.sort_values(by=['Date'], inplace=True, ascending=True)
 
 # Loops through the database
@@ -105,14 +105,14 @@ for index, row in tweetSentiment2020.iterrows():
     # If its a new day then get the average and reset the variables for the next day
     else:
         sentimentAverage = currentSum / currentAmount
-        SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "Sentiment": sentimentAverage},ignore_index=True)
+        SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "SentimentValue": sentimentAverage},ignore_index=True)
         currentDate = row["Date"]
         currentAmount = 1
         currentSum = row['0']
 
 # Adds the last day since it would exit the loop before adding it
 sentimentAverage = currentSum / currentAmount
-SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "Sentiment": sentimentAverage},ignore_index=True)
+SentimentAverageDF = SentimentAverageDF.append({"Date": currentDate, "SentimentValue": sentimentAverage},ignore_index=True)
 
 # Exports the file to a csv
 SentimentAverageDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/sentiment-analysis-data/{}.csv'.format("DailySentiment"))

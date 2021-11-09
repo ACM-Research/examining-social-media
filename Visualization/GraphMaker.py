@@ -183,17 +183,29 @@ SentimentnStock2020.line(year2020["Date"], year2020["SentimentValue"], legend_la
                          line_color="Blue")
 
 # Puts all the graphs into a dictionary so we can embed them all at the same time
-Graphs = {"Stock2018": stockYear2018,"Stock2019": stockYear2019,"Stock2012": stockYear2020}
+Graphs = {
+    "Stock2018": stockYear2018,"Stock2019": stockYear2019,"Stock2020": stockYear2020,
+    "Sentiment2018":sentimentYear2018, "Sentiment2019":sentimentYear2019, "Sentiment2020":sentimentYear2020,
+    "SentimentnStock2018":SentimentnStock2018, "SentimentnStock2019":SentimentnStock2019, "SentimentnStock2020":SentimentnStock2020,
+}
 
 # Gets the embedding code
 script, divs = components(Graphs)
 
 # Exports the embedded javascript code into a file
-ScriptFile = open("/Scripts.txt", "w")
+ScriptFile = open("C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/Scripts.txt", "w")
 ScriptFile.write(script)
 ScriptFile.close()
 
 # Exports the embedded html div code into a file
-DivFile = open("/Divs.txt", "w")
-DivFile.write(str(divs))
+DivFile = open("C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/Divs.txt", "w")
+
+# Adds space to make it easier to view the file
+divStr = str(divs)
+divStr = divStr.replace(',', ',\n')
+
+divStr = divStr.replace('{', '{\n')
+divStr = divStr.replace('}', '\n}')
+
+DivFile.write(divStr)
 DivFile.close()

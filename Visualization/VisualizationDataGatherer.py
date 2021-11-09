@@ -29,7 +29,6 @@ for index, row in NFLXStock.iterrows():
             removeRow()
 
 
-
 # Filling in missing values with (y + x) / 2 and repeated for other missing values
 
 # inputs the first missing value so the code can have a starting point
@@ -127,16 +126,17 @@ for index, row in NFLXStock.iterrows():
 # Adds the row
 NFLXStock['StockChange'] = changeArr
 
-# Adding temporary sentiment data
+# adding sentiment data to the
+SentimentData = pd.read_csv("../sentiment-analysis-data/DailySentiment.csv")
 
-sentimentVals = []
+SentimentData.drop(["Unnamed: 0"], axis=1, inplace=True)
 
-for index, row in NFLXStock.iterrows():
-    sentiVal = math.sin(index * math.pi /100)
+# Combines stock and sentiment data into the finished dataframe
+NFLXStock['Date'] = pd.to_datetime(SentimentData.Date)
+SentimentData['Date'] = pd.to_datetime(SentimentData.Date)
+FinishedDF = pd.merge(NFLXStock,SentimentData, how="outer", on="Date")
 
-    sentimentVals.append(sentiVal)
-
-NFLXStock['SentimentValue'] = sentimentVals
-
+# Drops rows with missing values
+FinishedDF.dropna(axis=0, how='any', thresh=None, subset=None, inplace=True)
 # Exports the panda database to a file
-NFLXStock.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/{}.csv'.format("VisualizationData"))
+FinishedDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/{}.csv'.format("VisualizationData"))
