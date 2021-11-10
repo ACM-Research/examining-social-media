@@ -138,6 +138,8 @@ FinishedDF = pd.merge(NFLXStock,SentimentData, how="outer", on="Date")
 # Drops rows with missing values
 FinishedDF.dropna(axis=0, how='any', thresh=None, subset=None, inplace=True)
 
+# FinishedDF['SentimentValue'] = FinishedDF['SentimentValue'] * 800;
+
 sentimentChangeArr = []
 
 # Loops through all the rows to get the change for each row
@@ -157,10 +159,132 @@ for index, row in FinishedDF.iterrows():
 
     sentimentChangeArr.append(sentDiff)
 
+
 # Adds the row
 FinishedDF['SentimentChange'] = sentimentChangeArr
 
+
+
+# print(FinishedDF.corr())
+
+corrArr = [];
+sentimentMean = FinishedDF['SentimentValue'].mean();
+
+for index, row in FinishedDF.iterrows():
+    if row["StockChange"] == 0:
+        continue;
+    if row["SentimentValue"] > sentimentMean:
+        if row["StockChange"] > 0:
+            corrArr.append(1)
+        else:
+            corrArr.append(0)
+    else:
+        if row["StockChange"] > 0:
+            corrArr.append(0)
+        else:
+            corrArr.append(1)
+
+print("ALl Years Correlatoin: ", sum(corrArr) / len(corrArr))
+
+# Gets the index of the range for each graph,
+index2018 = None;
+index2019 = None;
+for index, row in FinishedDF.iterrows():
+    if row["Date"].year == 2019 and row["Date"].month == 9 and row["Date"].day == 1:
+        index2018 = index
+    elif row["Date"].year == 2020 and row["Date"].month == 9 and row["Date"].day == 1:
+        index2019 = index
+
+# Makes panda databases for each year range
+year2018 = FinishedDF.iloc[:index2018, :].copy()
+year2018.reset_index(inplace=True)
+year2018.drop('index', axis=1, inplace=True)
+
+year2019 = FinishedDF.iloc[:index2019, :].iloc[index2018:, :].copy()
+year2019.reset_index(inplace=True)
+year2019.drop('index', axis=1, inplace=True)
+
+year2020 = FinishedDF.iloc[index2019:, :].copy()
+year2020.reset_index(inplace=True)
+year2020.drop('index', axis=1, inplace=True)
+
+corrArr = [];
+sentimentMean = year2018['SentimentValue'].mean();
+
+for index, row in year2018.iterrows():
+    if row["StockChange"] == 0:
+        continue;
+    if row["SentimentValue"] > sentimentMean:
+        if row["StockChange"] > 0:
+            corrArr.append(1)
+        else:
+            corrArr.append(0)
+    else:
+        if row["StockChange"] > 0:
+            corrArr.append(0)
+        else:
+            corrArr.append(1)
+
+print("2018 correlation: " , sum(corrArr) / len(corrArr))
+
+corrArr = [];
+sentimentMean = year2019['SentimentValue'].mean();
+
+for index, row in year2019.iterrows():
+    if row["StockChange"] == 0:
+        continue;
+    if row["SentimentValue"] > sentimentMean:
+        if row["StockChange"] > 0:
+            corrArr.append(1)
+        else:
+            corrArr.append(0)
+    else:
+        if row["StockChange"] > 0:
+            corrArr.append(0)
+        else:
+            corrArr.append(1)
+
+print("2019 correlation: ", sum(corrArr) / len(corrArr))
+
+corrArr = [];
+sentimentMean = year2020['SentimentValue'].mean();
+
+for index, row in year2020.iterrows():
+    if row["StockChange"] == 0:
+        continue;
+    if row["SentimentValue"] > sentimentMean:
+        if row["StockChange"] > 0:
+            corrArr.append(1)
+        else:
+            corrArr.append(0)
+    else:
+        if row["StockChange"] > 0:
+            corrArr.append(0)
+        else:
+            corrArr.append(1)
+
+print("2020 correlation: ", sum(corrArr) / len(corrArr))
+
+
+StockIncreaseBoolArr = []
+
+for index, row in FinishedDF.iterrows():
+    if row["StockChange"] > 0:
+        StockIncreaseBoolArr.append(1)
+    else:
+        StockIncreaseBoolArr.append(0)
+
+FinishedDF['StockIncreaseBool'] = StockIncreaseBoolArr
+
+SentimentPositiveBoolArr = []
+
+for index, row in FinishedDF.iterrows():
+    if row["SentimentValue"] > sentimentMean:
+        SentimentPositiveBoolArr.append(1)
+    else:
+        SentimentPositiveBoolArr.append(0)
+
+FinishedDF['SentimentPositiveBool'] = SentimentPositiveBoolArr
+
 # Exports the panda database to a file
 FinishedDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/{}.csv'.format("VisualizationData"))
-
-print(FinishedDF.corr(method ='pearson'))

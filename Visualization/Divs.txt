@@ -1,11 +1,11 @@
 {
-'Stock2018': '\n<div class="bk-root" id="532aa060-8be9-45fc-b9f8-9c493cd09199" data-root-id="1002"></div>',
- 'Stock2019': '\n<div class="bk-root" id="06e7508a-3f8c-47ae-999b-7bfd2a39c7cf" data-root-id="1064"></div>',
- 'Stock2020': '\n<div class="bk-root" id="852905ac-59a1-4502-91c1-53f8189733b5" data-root-id="1126"></div>',
- 'Sentiment2018': '\n<div class="bk-root" id="271461e5-8a24-42f9-be83-788f9bf320fa" data-root-id="1188"></div>',
- 'Sentiment2019': '\n<div class="bk-root" id="651324f4-d2a5-4c22-a992-db72898811d4" data-root-id="1250"></div>',
- 'Sentiment2020': '\n<div class="bk-root" id="c0c61d03-1f86-409e-8484-79a11068b0d3" data-root-id="1312"></div>',
- 'SentimentnStock2018': '\n<div class="bk-root" id="d8b733ed-5855-459a-9dc6-e8e7c50f74ff" data-root-id="1374"></div>',
- 'SentimentnStock2019': '\n<div class="bk-root" id="546b2543-c043-4664-aa36-3c3bc3023ecc" data-root-id="1466"></div>',
- 'SentimentnStock2020': '\n<div class="bk-root" id="91f5f60f-9cc6-49cc-bf92-2b2dab2931bb" data-root-id="1558"></div>'
+'Stock2018': '\n<div class="bk-root" id="9ddd6ae1-f78b-4abc-b2dd-71eae267b577" data-root-id="1002"></div>',
+ 'Stock2019': '\n<div class="bk-root" id="fa44b792-f673-496c-ac8d-bd44f94f8b9c" data-root-id="1064"></div>',
+ 'Stock2020': '\n<div class="bk-root" id="1fd7c9a8-0d74-47ce-8083-5bb414154552" data-root-id="1126"></div>',
+ 'Sentiment2018': '\n<div class="bk-root" id="c8f5ece5-b1b9-4690-b39d-88ac0f54dee0" data-root-id="1188"></div>',
+ 'Sentiment2019': '\n<div class="bk-root" id="5009c1ac-4bb5-46a8-82e0-d40e7639386e" data-root-id="1250"></div>',
+ 'Sentiment2020': '\n<div class="bk-root" id="bfbdf43f-f164-4a66-94ab-70e8b44feb43" data-root-id="1312"></div>',
+ 'SentimentnStock2018': '\n<div class="bk-root" id="13d00da1-9cc3-44eb-b95c-247a360eb8ba" data-root-id="1374"></div>',
+ 'SentimentnStock2019': '\n<div class="bk-root" id="9ed3d1dd-b41e-4c8e-91d3-74c12518e479" data-root-id="1466"></div>',
+ 'SentimentnStock2020': '\n<div class="bk-root" id="40b49fb0-ac7c-42e3-8235-5a51cbca0cbe" data-root-id="1558"></div>'
 }

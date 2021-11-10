@@ -184,8 +184,6 @@ SentimentnStock2020.line(year2020["Date"], year2020["StockChange"], legend_label
 SentimentnStock2020.line(year2020["Date"], year2020["SentimentChange"], legend_label="Sentiment", line_width=2,
                          line_color="Blue")
 
-output_file(filename="SentStockGraph.html", title="Sentiment and Stock Graph")
-show(SentimentnStock2020)
 
 # Puts all the graphs into a dictionary so we can embed them all at the same time
 Graphs = {
@@ -215,3 +213,24 @@ divStr = divStr.replace('}', '\n}')
 DivFile.write(divStr)
 DivFile.close()
 
+# Makes the graph object for sentiment and stock together for 2020
+test = figure(
+    title='Sentiment and Stock(9/2020 - 10/2020)',
+    x_axis_label='Date',
+    y_axis_label='Value',
+    plot_width=1000,
+    plot_height=500,
+    x_axis_type='datetime',
+    #y_range=(-0.5, 0.5)
+)
+
+# Adds a line for the stock values
+test.line(VisualizationData["Date"], VisualizationData["Stock"], legend_label="StockData", line_width=2,
+                         line_color="Blue")
+
+# Adds a line for the sentiment values
+test.line(VisualizationData["Date"], VisualizationData["SentimentValue"], legend_label="Sentiment", line_width=2,
+                         line_color="Red")
+
+output_file(filename="SentStockGraph.html", title="Sentiment and Stock Graph")
+show(test)
