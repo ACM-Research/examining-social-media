@@ -1,7 +1,7 @@
 # Examining Social Media’s Effect on Modern-Day Mob Mentality
 # Purpose
-The purpose of this project is to learn the large-scale effects of modern-day social media and how its growing popularity and use has affected “mob mentality,” also known as crowd theory, and analyze the role of websites such as Twitter in influencing recent financial and economic trends.
-We chose to focus our research on the company Netflix. Netflix is currently the world’s most popular streaming service in the world with over 207 million subscribers. We analyzed how Netflix’s corresponding stocks and tweets with the #netflix correlate with each other.
+The purpose of this project is to analyze the large-scale effects of modern-day social media and how its growing popularity and use has affected “mob mentality,” also known as crowd theory, through research on the role of websites, such as Twitter, in influencing recent financial and economic trends.
+We chose to focus our research on the company Netflix. Netflix is currently the world’s most popular streaming service in the world with over 207 million subscribers. We analyzed how Netflix’s corresponding stocks and tweets containing #netflix correlate with each other.
 
 ## Research Poster
 The research poster below details our process and results.
@@ -9,20 +9,20 @@ The research poster below details our process and results.
 ![Research_Poster.jpg](./Research_Poster.jpg)
 
 # Data
-In this research we used two types of data, the NFLX Stock data and sentiment scores of user’s tweet in the twitter platform with the #netflix in their tweets. Both the tweets and the prices were from September 1st, 2018 to September 1st, 2020.
+We used two types of data, the NFLX stock data and sentiment scores of user tweets containing #netflix on the Twitter platform. The time period of both the tweets and the prices ranged from September 1st, 2018 to September 1st, 2021.
 
 ## NFLX Stock market closing prices
-The NFLX stock data was retrieved from historical daily stock prices available on NASDAQ using the yfinance Python package. The dataset consists of opening, closing, high, and low stock NFLX prices, and This research used the closing stock prices for each day.
+The NFLX stock data was retrieved from historical daily stock prices available on NASDAQ using the yfinance Python package. The dataset consists of opening, closing, high, and low stock NFLX prices. This research focused on the closing stock prices for each day.
 
 ## Twitter Data extraction
-We implemented a custom scraper using Puppeteer, a Node Library that can automate the chrome browser to run website tests. We selected advanced search query options and used the scraper to open up the url for hashtag netflix tweets on a certain date and then iterate through each of the tweet containers on that page. During each iteration, the dates and the text bodies of each tweet were stored into a CSV file.
+We implemented a custom scraper using Puppeteer, a Node Library that can automate the chrome browser to run website tests. We selected advanced search query options and used the scraper to open up the url for tweets containg #netflix on a certain date and iterate through each of the tweet containers on that page. During each iteration, the dates and the text bodies of each tweet were stored into a CSV file.
 
 # Data Processing
 ## Data cleaning
 We retained the original casing and the punctuations because capitalized letters and exclamations can illustrate strong emotions or emphasis. However, links, urls, symbols, digits, and mentions of other users in the tweets were removed. Stopwords were also removed because they posed no influence on the actual sentiment of the tweet. In this research we used the Python Gensim library’s remove_stopwords() function. 
 
 ## Sentimental Analysis
-VADER was used in this research to conduct sentiment analysis in the tweets, with an accuracy rate of approximately 56%. This tool tells us not only if a text is positive or negative but also determines how positive or negative a text is by giving us a decimal value between -1 and 1. Approximately 97% of the tweets were categorized as positive sentiments , 2.70% were categorized as negative and only roughly 0.3% of the tweets were categorized as negative sentiments. 
+VADER was used in this research to conduct sentiment analysis in the tweets, with an accuracy rate of approximately 56%. This tool tells us not only if a text is positive or negative but also determines how positive or negative a text is by giving us a decimal value between -1 and 1. Approximately 97% of the tweets were categorized as positive sentiments  2.70% were categorized as negative, and only 0.3% of the tweets were categorized as negative sentiments. 
 
 # Visualization
 We visualized our findings by graphing two different graphs using the Bokeh Python library. One graph contained the stock market closing prices over time and the other contained average sentiment score of tweets over time. 
