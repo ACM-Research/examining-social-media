@@ -18,7 +18,7 @@ The NFLX stock data was retrieved from historical daily stock prices available o
 We implemented a custom scraper using Puppeteer, a Node Library that can automate the chrome browser to run website tests. We selected advanced search query options and used the scraper to open up the url for tweets containg #netflix on a certain date and iterate through each of the tweet containers on that page. During each iteration, the dates and the text bodies of each tweet were stored into a CSV file.
 
 # Data Processing
-## Data cleaning
+## Data Cleaning
 We retained the original casing and the punctuations because capitalized letters and exclamations can illustrate strong emotions or emphasis. However, links, urls, symbols, digits, and mentions of other users in the tweets were removed. Stopwords were also removed because they posed no influence on the actual sentiment of the tweet. In this research we used the Python Gensim library’s remove_stopwords() function. 
 
 ## Sentimental Analysis
