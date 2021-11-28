@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const { hashTweetData } = require("./util");
 
 
-const PAGE_URL_START = "https://twitter.com/search?q=%23Tesla%20until%3A";
+const PAGE_URL_START = "https://twitter.com/search?q=%23Netflix%20until%3A";
 const PAGE_URL_MID = "%20since%3A";
 const PAGE_URL_END = "&src=typed_query&f=top";
 

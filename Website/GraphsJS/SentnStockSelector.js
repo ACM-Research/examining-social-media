@@ -1,4 +1,4 @@
-var currentYear = 2020;
+var currentYear = 2018;
 
 let button2018SentStock = document.getElementById("SentStockButton2018");
 let button2019SentStock = document.getElementById("SentStockButton2019");

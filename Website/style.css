@@ -56,12 +56,29 @@
     justify-content: center;
 }
 
+.ProcessTextHolderC{
+    display: block;
+    margin: auto;
+    width: 1000px;
+}
+
 .ProcessText{
     text-align: left;
     padding-right: 40px;
-    padding-left: 30px;
+    padding-left: 50px;
     font-size: 22px;
     line-height: 40px;
+}
+
+.ProcessTextC{
+    text-align: center;
+    font-size: 22px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.InsideList{
+    padding-left: 40px;
 }
 
 .ProcessVisualizationR,.ProcessVisualizationL{
@@ -108,8 +125,18 @@
     background-color: #555555;
 }
 
-.Image{
-    min-width: 100%;
+.TwitterImage{
+    display: block;
+    margin: auto;
+    height: 250px;
+    width: 250px;
+}
+
+.BokehImage{
+    display: block;
+    margin: auto;
+    height: 350px;
+    width: 350px;
 }
 
 .SentimentSectionTitle{
@@ -177,13 +204,20 @@
     padding-bottom: 25px;
 }
 
+.ConclusionTextHolder{
+    display: block;
+    margin: auto;
+    width: 1400px;
+}
+
 .ConclusionText{
     display: block;
     margin: auto;
     width: 70%;
     font-size: 25px;
     line-height: 40px;
-    text-align: center;
+    text-align: left;
+    padding: 10px 0;
 }
 
 .GitHub{
@@ -195,3 +229,4 @@
     text-decoration: underline;
     padding: 40px 0;
 }
+

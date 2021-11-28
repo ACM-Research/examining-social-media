@@ -213,9 +213,20 @@ divStr = divStr.replace('}', '\n}')
 DivFile.write(divStr)
 DivFile.close()
 
+
+averagedDates = [];
+averagedSentimentBool = [];
+averageStockBool = [];
+
+curIndex = 1
+curStockAverage = 0
+curSentimentBool = 0
+curDate = None
+#for()
+
 # Makes the graph object for sentiment and stock together for 2020
 test = figure(
-    title='Sentiment and Stock(9/2020 - 10/2020)',
+    title='Sentiment(9/2018 - 9/2020)',
     x_axis_label='Date',
     y_axis_label='Value',
     plot_width=1000,
@@ -225,12 +236,14 @@ test = figure(
 )
 
 # Adds a line for the stock values
-test.line(VisualizationData["Date"], VisualizationData["Stock"], legend_label="StockData", line_width=2,
-                         line_color="Blue")
+#test.line(VisualizationData["Date"], VisualizationData["Stock"], legend_label="StockData", line_width=2,
+          #               line_color="Blue")
 
 # Adds a line for the sentiment values
 test.line(VisualizationData["Date"], VisualizationData["SentimentValue"], legend_label="Sentiment", line_width=2,
-                         line_color="Red")
+                       line_color="Red")
 
 output_file(filename="SentStockGraph.html", title="Sentiment and Stock Graph")
 show(test)
+
+

@@ -19,202 +19,222 @@
 
         <div class="ProjectOutlie">
             <p class="OutlineText">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                The influence of social media has facilitated major trends and shaped popular culture into what it is today, affecting mob mentality among users.  This project will focus on the impact of social media on mob mentality and how that affects corresponding stock trends.  We hypothesize that there will be a direct relationship between the sentiment of the netflix tweets and the NFLX stock data;  assentiment becomes more positive, stock prices will increase.
             </p>
         </div>
 
-        <div class="ProcessesHolder">
 
-            <div class="ProcessHolder">
-                <h3 class="ProcessTitle">STOCK QUERYING/ANALYSIS</h3>
+        <div class="ProcessHolder">
+            <h3 class="ProcessTitle">STOCK QUERYING/ANALYSIS</h3>
 
-                <div class="ProcessContents">
-                    <div class="ProcessTextHolder">
-                        <p class="ProcessText">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
+            <div class="ProcessContents">
+                <div class="ProcessTextHolder">
+                    <p class="ProcessText" style="line-height: 60px;">The NFLX stock data was retrieved from historical daily stock prices available on NASDAQ using the yFinance Python package, and we specifically looked at the closing prices between September 1, 2018 to September 1, 2021.                    </p>
+                </div>
+                <div class="ProcessVisualizationR">
+                    <div class="ProcessGraphHolder">
+                        <!-- 2018 -->
+                        <div class="bk-root" id="44feaffe-72c4-4214-97ce-8e039f43f006" data-root-id="1002"></div>
+                        <!-- 2019 -->
+                        <div class="bk-root" id="92dc78c8-c438-4d2c-8277-8a4e9e826a8d" data-root-id="1064"></div>
+                        <!-- 2020 -->
+                        <div class="bk-root" id="d1e1cad0-86c2-47f5-9752-3074426c7994" data-root-id="1126"></div>
                     </div>
-                    <div class="ProcessVisualizationR">
-                        <div class="ProcessGraphHolder">
-                            <!-- 2018 -->
-                            <div class="bk-root" id="44feaffe-72c4-4214-97ce-8e039f43f006" data-root-id="1002"></div>
-                            <!-- 2019 -->
-                            <div class="bk-root" id="92dc78c8-c438-4d2c-8277-8a4e9e826a8d" data-root-id="1064"></div>
-                            <!-- 2020 -->
-                            <div class="bk-root" id="d1e1cad0-86c2-47f5-9752-3074426c7994" data-root-id="1126"></div>
-                        </div>
                         
-                        <div class="GraphButtons">
+                    <div class="GraphButtons">
                             
-                            <button class="GraphButton" id="StockButton2018">2018</button>
-                            <button class="GraphButton" id="StockButton2019">2019</button>
-                            <button class="GraphButton" id="StockButton2020">2020</button>
-                            <script src="GraphsJS/StockGraphSelector.js "></script>  
-                        </div>
+                       <button class="GraphButton" id="StockButton2018">2018</button>
+                        <button class="GraphButton" id="StockButton2019">2019</button>
+                        <button class="GraphButton" id="StockButton2020">2020</button>
+                        <script src="GraphsJS/StockGraphSelector.js "></script>  
                     </div>
                 </div>
             </div>
-
-            <div class="ProcessHolder">
-                <h3 class="ProcessTitle">TWEETS QUERYING</h3>
-
-                <div class="ProcessContents">
-                    <div class="ProcessTextHolder">
-                        <p class="ProcessText">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                    <div class="ProcessVisualizationL">
-                        <img class="Image" src="Images/TwitterLogo.png" alt="Twitter Logo">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="ProcessHolder">
-                <h3 class="ProcessTitle">TWEETS CLEANING</h3>
-
-                <div class="ProcessContents">
-                    <div class="ProcessTextHolder">
-                        <p class="ProcessText">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                    <div class="ProcessVisualizationR">
-                        <div class="ProcessGraphHolder">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="ProcessHolder">
-                <h3 class="ProcessTitle">SENTIMENT ANALYSIS</h3>
-
-                <div class="ProcessContents">
-                    <div class="ProcessTextHolder">
-                        <p class="ProcessText">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                    <div class="ProcessVisualizationL">
-                        <div class="ProcessGraphHolder">
-
-                            <!-- 2018 -->
-                            <div class="bk-root" id="80f6b50d-b7f1-4b96-92e7-7721a04cea54" data-root-id="1188"></div>
-                            <!-- 2019 -->
-                            <div class="bk-root" id="b3abc778-7516-4b35-9dfd-8efdbb5db85f" data-root-id="1250"></div>
-                            <!-- 2020 -->
-                            <div class="bk-root" id="5b872375-003e-473f-a01d-4e607af8f78b" data-root-id="1312"></div>
-
-                                                     
-                        </div>
-                        
-                        <div class="GraphButtons">
-                            <button class="GraphButton" id="SentimentButton2018">2018</button>
-                            <button class="GraphButton" id="SentimentButton2019">2019</button>
-                            <button class="GraphButton" id="SentimentButton2020">2020</button>
-                            <script src="GraphsJS/SentimentGraphSelector.js "></script> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ProcessHolder">
-                <h3 class="ProcessTitle">GRAPHING DATA</h3>
-
-                <div class="ProcessContents">
-                    <div class="ProcessTextHolder">
-                        <p class="ProcessText">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                    <div class="ProcessVisualizationR">
-                        <div class="ProcessGraphHolder">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
-        
-        <div class="SentimentSectionHolder">
-            <h2 class="SentimentSectionTitle"> Sentiment and Stock Change Graph</h2>
 
-            <div class="SentimentSectionFlex">
-                <div class="SentimentAnalyzer">
-                    <h3 class="SetntimentGraphTitle">Sentiment Library</h3>
+        <div class="ProcessHolder">
+            <h3 class="ProcessTitle">TWEETS QUERYING</h3>
 
-                    <div class="SentimentGraphHolder">
-                        <div class="ProcessGraphHolder">
-
-                            <!-- 2018 -->
-                            <div class="bk-root" id="53f782f5-544e-493b-8ec7-f66e1ce41bcb" data-root-id="1374"></div>
-                            <!-- 2019 -->
-                            <div class="bk-root" id="31dc0a1e-213a-4732-ab8e-54884ae26132" data-root-id="1466"></div>
-                            <!-- 2020 -->
-                            <div class="bk-root" id="f9a72f18-2ee4-487a-9e15-30fcfc4cee5f" data-root-id="1558"></div>
-                                                     
-                        </div>
-                        
-                        <div class="GraphButtons">
-                            <button class="GraphButton" id="SentStockButton2018">2018</button>
-                            <button class="GraphButton" id="SentStockButton2019">2019</button>
-                            <button class="GraphButton" id="SentStockButton2020">2020</button>
-
-                            <script src="GraphsJS/SentnStockSelector.js "></script> 
-                        </div>
-                    </div>
-
-                    <div class="CorrelatoinHolder">
-                        <h3 class="Correlation">
-                            Correlation = 0.75
-                        </h3>
-                    </div>
-
-                    <div class="SentimentDescriptionHolder">
-                        <p class="SentimentDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-
+            <div class="ProcessContents">
+                <div class="ProcessTextHolder">
+                    <ul class="ProcessText">
+                        <li>90 tweets a day from 9/1/2018 to 9/1/2021 using the #Neflix tag on Twitterta</li>
+                        <li>Implemented a custom tweet scraper by using Puppeteer
+                            <ul class="InsideList">
+                                <li>Puppeteer is a Node Library that allows automation of the chrome browser to run website tests.</li>
+                                <li>The scraper opens up the URL for the #netflix tweet on a date, grabs datesand text body.</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="SentimentAnalyzer">
-                    <h3 class="SetntimentGraphTitle">Sentiment Library 2</h3>
-
-                    <div class="SentimentGraphHolder">
-                        <div class="SentimentGraph">
-                            
-                        </div>
-                    </div>
-
-                    <div class="CorrelatoinHolder">
-                        <h3 class="Correlation">
-                            Correlation = 0.75
-                        </h3>
-                    </div>
-
-                    <div class="SentimentDescriptionHolder">
-                        <p class="SentimentDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-
+                <div class="ProcessVisualizationL">
+                    <img class="TwitterImage" src="Images/TwitterLogo.png" alt="Twitter Logo">
                 </div>
             </div>
+        </div>
             
+        <div class="ProcessHolder">
+            <h3 class="ProcessTitle">SENTIMENT ANALYSIS</h3>
+
+            <div class="ProcessContents">
+                <div class="ProcessTextHolder">
+                    <p class="ProcessText">
+                        Upon extracting the tweets, we needed to generate sentimental scores which will be plotted on a visualizer to trace for correlation between sentiment scores and stock market prices. In order to get accurate sentiment scores we first need to clean the data to remove data that will reduce effectivnes of the sentiment analyzer.
+                    </p>
+
+                    <b class="ProcessText">Data Cleaning</b>
+                    <ul class="ProcessText">
+                        <div class="InsideList">
+                            <li> We retained: Original casing, content of the hashtag, punctuation</li>
+                            <li> We removed: inks, URLs, digits, mentions of other users using python regular expressions Stopwords using the python Gensim library</li>
+                        </div>
+                    </ul>
+
+                    <b class="ProcessText">Sentiment Analysis</b>
+
+                    <p class="ProcessText">We used VADER (Valence Aware Dictionary and Sentiment Reasoner) as our primary tool to conduct sentiment analysis.</p>
+                    <ul class="ProcessText">
+                        <div class="InsideList">
+                            <li> Assigns a tweet a value between -1 and +1.</li>
+                            <li> Scores of +1 being extremely positive and -1 extremely negative.</li>
+                        </div>
+                    </ul>
+
+                </div>
+                <div class="ProcessVisualizationR">
+                     <div class="ProcessGraphHolder">
+                        <!-- 2018 -->
+                        <div class="bk-root" id="80f6b50d-b7f1-4b96-92e7-7721a04cea54" data-root-id="1188"></div>
+                        <!-- 2019 -->
+                        <div class="bk-root" id="b3abc778-7516-4b35-9dfd-8efdbb5db85f" data-root-id="1250"></div>
+                        <!-- 2020 -->
+                        <div class="bk-root" id="5b872375-003e-473f-a01d-4e607af8f78b" data-root-id="1312"></div>                             
+                    </div>
+                        
+                    <div class="GraphButtons">
+                        <button class="GraphButton" id="SentimentButton2018">2018</button>
+                        <button class="GraphButton" id="SentimentButton2019">2019</button>
+                        <button class="GraphButton" id="SentimentButton2020">2020</button>
+                        <script src="GraphsJS/SentimentGraphSelector.js "></script> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ProcessHolder">
+            <h3 class="ProcessTitle">GRAPHING DATA</h3>
+
+            <div class="ProcessContents">
+                <div class="ProcessVisualizationL">
+                    <img class="BokehImage" src="Images/bokehLogo.png" alt="Twitter Logo">
+                </div>
+
+                <div class="ProcessTextHolder">
+                    <p class="ProcessText">
+                        We proceeded to make an accurate visualization of the stock market closing prices and sentiment scores after extracting the two types of data. 
+                    </p>
+
+                    <b class="ProcessText">We graphed two different graphs</b>
+                         
+                    <ol class="ProcessText">
+                        <div class="InsideList">
+                            <li>The stock market closing prices for the past three years</li>
+                            <li>The average sentiment score of all tweets each day for the past three years</li>
+                        </div>
+                    </ol>
+
+                    <p class="ProcessText">We used the Bokeh python library for this process</p>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="ProcessHolder">
+            <h3 class="ProcessTitle">Results</h3>
+
+            <div class="ProcessContents">
+                <div class="ProcessTextHolderC">
+                    <p class="ProcessTextC"><b>Sentiment score distribution</b></p>
+
+                    <ol class="ProcessText">
+                        <div class="InsideList">
+                            <li>97% of the tweets were categorized as positive sentiments</li>
+                            <li>2.7% of the tweets were categorized as neutral sentiments</li>
+                            <li>0.3% of the tweets were categorized as negative sentiments</li>
+                        </div>
+                    </ol>
+
+                    <p class="ProcessTextC"><b>Procedure of calculating correlation</b></p>
+                    <p class="ProcessText">
+                        In order to interpret the data we needed to calculate the correlation between the stock prices and the sentiment value for each year.
+                    </p>
+
+                    <ol class="ProcessText">
+                        <div class="InsideList">
+                            <li>
+                                Assigned a value of 1 or 0 to a pair of data values for each day: the change in stock price and sentiment relative to the sentiment mean.
+                                <ul class="InsideList">
+                                    <li>
+                                        1 was assigned to either:
+                                        <ol class="InsideList">
+                                            <li>a positive change in stock prices and a sentiment greater than the sentiment mean</li>
+                                            <li>a negative change in stock prices and a sentiment less than the sentiment mean</li>
+                                        </ol>
+                                    </li>
+                                    <li>0 was assigned to the other comparisons.</li>
+                                </ul>
+                            </li>
+
+                            <li>The sum of these values were used to compute an average correlation scorefor each year with was <u>0.457</u> </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+
         </div>
 
         <div class="ConclusionHolder">
             <h2 class="ConclusionTitle">Conclusion</h2>
+            <div class="ConclusionTextHolder">
+                <p class="ConclusionText">The interpretation of the correlations score is as follows:</p>
 
-            <p class="ConclusionText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <ul class="ConclusionText">
+                    <div class="InsideList">
+                        <li>
+                            Due to a designation of four possible outcomes when rating each pair of data values and two outcomes corresponding to each 1 and 0, if assigned at random, it follows: 
+                            <ul class="InsideList">
+                                <li>1 would correspond to roughly half of the total pairs and 0 for the remainingpairs.</li>
+                                <li>The expected value of this random distribution is 0.5</li>
+                            </ul>
+                        </li>
+                        <li>An average correlation score closer to 1 suggests a strong direct while a correlation of 0 suggests inverse relationship</li>
+                    </div>
+                </ul>
 
+                <p class="ConclusionText">Therefore, the overall score of 0.46 falling within a close range of 0.5 implies arandom correlation between the changes in NFLX stock prices and the changesin the sentiment of the netflix tweets</p>
+
+                <ul class="ConclusionText">
+                    <b>Reasons for the Correlatoin:</b>
+                    <div class="InsideList">
+                        <li>The majority of the tweets queried from #neflix were positive and we hypothesize this is because Netflix recommends proven and popular user catered shows of which they then tweet on. This makes it a bad twitter a bad showcase of users’ opinions on Netflix but users opinion on the shows</li>
+                    </div>
+                </ul>
+            </div>
             <a href="https://github.com/ACM-Research/examining-social-media" target="_blank">
                 <h2 class="GitHub">https://github.com/ACM-Research/examining-social-media</h2>
             </a>
 
         </div>
     
-
+        <div style="display: none;">
+            <!-- 2018 -->
+            <div class="bk-root" id="53f782f5-544e-493b-8ec7-f66e1ce41bcb" data-root-id="1374"></div>
+            <!-- 2019 -->
+            <div class="bk-root" id="31dc0a1e-213a-4732-ab8e-54884ae26132" data-root-id="1466"></div>
+            <!-- 2020 -->
+            <div class="bk-root" id="f9a72f18-2ee4-487a-9e15-30fcfc4cee5f" data-root-id="1558"></div>
+        </div>
 
         <script src="GraphsJS/GraphRenderer.js"></script>    
     </body>

@@ -171,8 +171,6 @@ corrArr = [];
 sentimentMean = FinishedDF['SentimentValue'].mean();
 
 for index, row in FinishedDF.iterrows():
-    if row["StockChange"] == 0:
-        continue;
     if row["SentimentValue"] > sentimentMean:
         if row["StockChange"] > 0:
             corrArr.append(1)
@@ -185,6 +183,7 @@ for index, row in FinishedDF.iterrows():
             corrArr.append(1)
 
 print("ALl Years Correlatoin: ", sum(corrArr) / len(corrArr))
+print("All years sentiment mean: ", sentimentMean)
 
 # Gets the index of the range for each graph,
 index2018 = None;
@@ -209,12 +208,10 @@ year2020.reset_index(inplace=True)
 year2020.drop('index', axis=1, inplace=True)
 
 corrArr = [];
-sentimentMean = year2018['SentimentValue'].mean();
+sentimentMean2018 = year2018['SentimentValue'].mean();
 
 for index, row in year2018.iterrows():
-    if row["StockChange"] == 0:
-        continue;
-    if row["SentimentValue"] > sentimentMean:
+    if row["SentimentValue"] > sentimentMean2018:
         if row["StockChange"] > 0:
             corrArr.append(1)
         else:
@@ -226,14 +223,13 @@ for index, row in year2018.iterrows():
             corrArr.append(1)
 
 print("2018 correlation: " , sum(corrArr) / len(corrArr))
+print("2018 sentiment mean: ", sentimentMean2018)
 
 corrArr = [];
-sentimentMean = year2019['SentimentValue'].mean();
+sentimentMean2019 = year2019['SentimentValue'].mean();
 
 for index, row in year2019.iterrows():
-    if row["StockChange"] == 0:
-        continue;
-    if row["SentimentValue"] > sentimentMean:
+    if row["SentimentValue"] > sentimentMean2019:
         if row["StockChange"] > 0:
             corrArr.append(1)
         else:
@@ -245,14 +241,13 @@ for index, row in year2019.iterrows():
             corrArr.append(1)
 
 print("2019 correlation: ", sum(corrArr) / len(corrArr))
+print("2019 sentiment mean: ", sentimentMean2019)
 
 corrArr = [];
-sentimentMean = year2020['SentimentValue'].mean();
+sentimentMean2020 = year2020['SentimentValue'].mean();
 
 for index, row in year2020.iterrows():
-    if row["StockChange"] == 0:
-        continue;
-    if row["SentimentValue"] > sentimentMean:
+    if row["SentimentValue"] > sentimentMean2020:
         if row["StockChange"] > 0:
             corrArr.append(1)
         else:
@@ -264,6 +259,7 @@ for index, row in year2020.iterrows():
             corrArr.append(1)
 
 print("2020 correlation: ", sum(corrArr) / len(corrArr))
+print("2020 sentiment mean: ", sentimentMean2020)
 
 
 StockIncreaseBoolArr = []
@@ -288,3 +284,5 @@ FinishedDF['SentimentPositiveBool'] = SentimentPositiveBoolArr
 
 # Exports the panda database to a file
 FinishedDF.to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/{}.csv'.format("VisualizationData"))
+
+FinishedDF.corr().to_csv('C:/Users/jesse/Documents/Stuff/CodeThings/ACM/ACM_StockData/Visualization/{}.csv'.format("CorrelationThings"))
