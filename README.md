@@ -5,8 +5,8 @@ We chose to focus our research on the company Netflix. Netflix is currently the 
 
 ## Research Poster
 The research poster below details our process and results.
-// embed poster here 
 
+![Research_Poster.jpg](./Research_Poster.jpg)
 
 # Data
 In this research we used two types of data, the NFLX Stock data and sentiment scores of user’s tweet in the twitter platform with the #netflix in their tweets. Both the tweets and the prices were from September 1st, 2018 to September 1st, 2020.
