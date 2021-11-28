@@ -39,7 +39,7 @@ The sum of these values were used to compute an average correlation score.The ov
 Our overall correlation score of 0.46 falling close to 0.5 implies a that there is a random correlation between the changes in NFLX stock prices and the relative sentiment of the hashtag netflix tweets. The majority of the tweets queried from #neflix were positive and we hypothesize this is because Netflix recommends proven and popular shows user catered based on the personalized recommendation algorithm, of which they then tweet on. This makes it a bad showcase of users opinion on Netflix.
 
 # Resources
-# Mod Mentality Website
+## Mob Mentality Website
 [Link - acmresearch.ml](https://acmresearch.ml/)
 
 ## Research Sources
