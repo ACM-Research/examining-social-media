@@ -1,15 +1,16 @@
 # Examining Social Media’s Effect on Modern-Day Mob Mentality
-# Purpose
-The purpose of this project is to analyze the large-scale effects of modern-day social media and how its growing popularity and use has affected “mob mentality,” also known as crowd theory, through research on the role of websites, such as Twitter, in influencing recent financial and economic trends.
-We chose to focus our research on the company Netflix. Netflix is currently the world’s most popular streaming service in the world with over 207 million subscribers. We analyzed how Netflix’s corresponding stocks and tweets containing #netflix correlate with each other.
 
 ## Research Poster
 The research poster below details our process and results.
 
 ![Research_Poster.jpg](./Research_Poster.jpg)
 
+# Purpose
+The purpose of this project is to analyze the large-scale effects of modern-day social media and how its growing popularity and use has affected “mob mentality,” also known as crowd theory, through research on the role of websites, such as Twitter, in influencing recent financial and economic trends.
+We chose to focus our research on the company Netflix. Netflix is currently the world’s most popular streaming service in the world with over 207 million subscribers. We analyzed how Netflix’s corresponding stocks and tweets containing #netflix correlate with each other.
+
 ## Mob Mentality Website
-[Link - acmresearch.ml](https://acmresearch.ml/)
+[acmresearch.ml](https://acmresearch.ml/)
 
 # Data
 We used two types of data, the NFLX stock data and sentiment scores of user tweets containing #netflix on the Twitter platform. The time period of both the tweets and the prices ranged from September 1st, 2018 to September 1st, 2021.
