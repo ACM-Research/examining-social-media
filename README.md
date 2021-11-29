@@ -8,6 +8,9 @@ The research poster below details our process and results.
 
 ![Research_Poster.jpg](./Research_Poster.jpg)
 
+## Mob Mentality Website
+[Link - acmresearch.ml](https://acmresearch.ml/)
+
 # Data
 We used two types of data, the NFLX stock data and sentiment scores of user tweets containing #netflix on the Twitter platform. The time period of both the tweets and the prices ranged from September 1st, 2018 to September 1st, 2021.
 
@@ -39,9 +42,6 @@ The sum of these values were used to compute an average correlation score.The ov
 Our overall correlation score of 0.46 falling close to 0.5 implies a that there is a random correlation between the changes in NFLX stock prices and the relative sentiment of the hashtag netflix tweets. The majority of the tweets queried from #neflix were positive and we hypothesize this is because Netflix recommends proven and popular shows user catered based on the personalized recommendation algorithm, of which they then tweet on. This makes it a bad showcase of users opinion on Netflix.
 
 # Resources
-## Mob Mentality Website
-[Link - acmresearch.ml](https://acmresearch.ml/)
-
 ## Research Sources
 - V. S. Pagolu, K. N. Reddy, G. Panda and B. Majhi, "Sentiment analysis of Twitter data for predicting stock market movements," 2016 International Conference on Signal Processing, Communication, Power and Embedded System (SCOPES), 2016, pp. 1345-1350, doi: 10.1109/SCOPES.2016.7955659.
 
