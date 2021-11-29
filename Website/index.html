@@ -58,11 +58,11 @@
             <div class="ProcessContents">
                 <div class="ProcessTextHolder">
                     <ul class="ProcessText">
-                        <li>90 tweets a day from 9/1/2018 to 9/1/2021 using the #Neflix tag on Twitterta</li>
-                        <li>Implemented a custom tweet scraper by using Puppeteer
+                        <li>90 tweets a day from 9/1/2018 to 9/1/2021 using the #neflix tag on Twitter.</li>
+                        <li>Implemented a custom tweet scraper by using Puppeteer:
                             <ul class="InsideList">
                                 <li>Puppeteer is a Node Library that allows automation of the chrome browser to run website tests.</li>
-                                <li>The scraper opens up the URL for the #netflix tweet on a date, grabs datesand text body.</li>
+                                <li>The scraper opens up the URL for the #netflix tweet on a date, grabs dates and text body.</li>
                             </ul>
                         </li>
                     </ul>
@@ -79,14 +79,14 @@
             <div class="ProcessContents">
                 <div class="ProcessTextHolder">
                     <p class="ProcessText">
-                        Upon extracting the tweets, we needed to generate sentimental scores which will be plotted on a visualizer to trace for correlation between sentiment scores and stock market prices. In order to get accurate sentiment scores we first need to clean the data to remove data that will reduce the effectiveness of the sentiment analyzer.
+                        Upon extracting the tweets, we needed to generate sentimental scores which were plotted on a visualizer to trace for correlation between sentiment scores and stock market prices. In order to get accurate sentiment scores, we first needed to clean the data to remove data that will reduce the effectiveness of the sentiment analyzer.
                     </p>
 
                     <b class="ProcessText">Data Cleaning</b>
                     <ul class="ProcessText">
                         <div class="InsideList">
-                            <li> We retained: Original casing, content of the hashtag, punctuation</li>
-                            <li> We removed: Links, URLs, digits, mentions of other users using python regular expressions Stopwords using the python Gensim library</li>
+                            <li> We retained: Original casing, content of the hashtag, punctuation.</li>
+                            <li> We removed: Links, URLs, digits, mentions of other users using python regular expressions Stopwords using the python Gensim library.</li>
                         </div>
                     </ul>
 
@@ -134,16 +134,17 @@
                         We proceeded to make an accurate visualization of the stock market closing prices and sentiment scores after extracting the two types of data. 
                     </p>
 
-                    <b class="ProcessText">We graphed two different graphs</b>
+                    <b class="ProcessText">We Graphed Two Different Graphs</b>
                          
-                    <ol class="ProcessText">
+                    =ol class="ProcessText">
+                        <p class="ProcessText">We used the Bokeh python library for this process</p>
                         <div class="InsideList">
                             <li>The stock market closing prices for the past three years</li>
                             <li>The average sentiment score of all tweets each day for the past three years</li>
                         </div>
                     </ol>
 
-                    <p class="ProcessText">We used the Bokeh python library for this process</p>
+                    
                 </div>
             </div>
 
@@ -155,17 +156,17 @@
 
             <div class="ProcessContents">
                 <div class="ProcessTextHolderC">
-                    <p class="ProcessTextC"><b>Sentiment score distribution</b></p>
+                    <p class="ProcessTextC"><b>Sentiment Score Distribution</b></p>
 
                     <ol class="ProcessText">
                         <div class="InsideList">
-                            <li>97% of the tweets were categorized as positive sentiments</li>
-                            <li>2.7% of the tweets were categorized as neutral sentiments</li>
-                            <li>0.3% of the tweets were categorized as negative sentiments</li>
+                            <li>97% of the tweets were categorized as positive sentiments.</li>
+                            <li>2.7% of the tweets were categorized as neutral sentiments.</li>
+                            <li>0.3% of the tweets were categorized as negative sentiments.</li>
                         </div>
                     </ol>
 
-                    <p class="ProcessTextC"><b>Procedure of calculating correlation</b></p>
+                    <p class="ProcessTextC"><b>Procedure of Calculating Correlation</b></p>
                     <p class="ProcessText">
                         In order to interpret the data, we needed to calculate the correlation between the stock prices and the sentiment value for each year.
                     </p>
@@ -178,15 +179,15 @@
                                     <li>
                                         1 was assigned to either:
                                         <ol class="InsideList">
-                                            <li>a positive change in stock prices and a sentiment greater than the sentiment mean</li>
-                                            <li>a negative change in stock prices and a sentiment less than the sentiment mean</li>
+                                            <li>a positive change in stock prices and a sentiment greater than the sentiment mean.</li>
+                                            <li>a negative change in stock prices and a sentiment less than the sentiment mean.</li>
                                         </ol>
                                     </li>
                                     <li>0 was assigned to the other comparisons.</li>
                                 </ul>
                             </li>
 
-                            <li>The sum of these values were used to compute an average correlation scorefor each year with was <u>0.457</u> </li>
+                            <li>The sum of these values were used to compute an average correlation scorefor each year with was <u>0.457</u>. </li>
                         </div>
                     </ol>
                 </div>
@@ -205,19 +206,19 @@
                             Due to a designation of four possible outcomes when rating each pair of data values and two outcomes corresponding to each 1 and 0, if assigned at random, it follows: 
                             <ul class="InsideList">
                                 <li>1 would correspond to roughly half of the total pairs and 0 for the remainingpairs.</li>
-                                <li>The expected value of this random distribution is 0.5</li>
+                                <li>The expected value of this random distribution is 0.5.</li>
                             </ul>
                         </li>
-                        <li>An average correlation score closer to 1 suggests a strong direct while a correlation of 0 suggests inverse relationship</li>
+                        <li>An average correlation score closer to 1 suggests a strong direct while a correlation of 0 suggests inverse relationship.</li>
                     </div>
                 </ul>
 
-                <p class="ConclusionText">Therefore, the overall score of 0.46 falling within a close range of 0.5 implies a random correlation between the changes in NFLX stock prices and the changes in the sentiment of the Netflix tweets</p>
+                <p class="ConclusionText">Therefore, the overall score of 0.46 falling within a close range of 0.5 implies a random correlation between the changes in NFLX stock prices and the changes in the sentiment of the Netflix tweets.</p>
 
                 <ul class="ConclusionText">
-                    <b>Reasons for the Correlatoin:</b>
+                    <b>Reasons for the Correlation:</b>
                     <div class="InsideList">
-                        <li>The majority of the tweets queried from #neflix were positive and we hypothesize this is because Netflix recommends proven and popular user catered shows of which they then tweet on. This makes it a bad twitter a bad showcase of users’ opinions on Netflix but users opinion on the shows</li>
+                        <li>The majority of the tweets queried from #netflix were positive and we hypothesize this is because Netflix recommends proven and popular user-catered shows of which they then tweet about. This makes Twitter a bad example of users' opinions on Netflix, but instead a good example of users' opinions on their titles."</li>
                     </div>
                 </ul>
             </div>
